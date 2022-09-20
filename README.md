@@ -1,5 +1,5 @@
 # Secure Code Workflow Template
-Use this template to monitor, classify and protect your code, assets and infrastructure for exposed API keys, tokens, credentials, vulnerable open-source packages, and high-risk security misconfigurations in a simple way, without noise.
+Use this template to monitor, classify and protect your code, assets, and infrastructure for exposed API keys, tokens, credentials, vulnerable open-source packages, and high-risk security misconfigurations in a simple way, without noise.
 
 ## GitHub Integration
  
@@ -22,24 +22,28 @@ jobs:
     secrets: inherit
 ```
 
-### Create Secrets
+### Configuration
  
-SourceGuard action must recive:
+SourceGuard action must receive:
  
 - `SG_CLIENT_ID` - Infinity Portal account identification
 - `SG_SECRET_KEY` - Secret key for access
  
 To generate these parameters, refer to https://portal.checkpoint.com/dashboard/sourceguard#/config/install (select your required Tenant) > GENERATE TOKEN
  
-Spectral action must recive:
+Spectral action must receive:
 - `SPECTRAL_DSN` - You'll need to provide Spectral dsn.  [GitHub secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 
-To retrive `SPECTRAL_DSN` parameter, refer to https://app.spectralops.io/sources
+To retrieve  `SPECTRAL_DSN` parameter, refer to https://app.spectralops.io/sources
 
 Now, create these keys: 
-- Organiztaion Scope
+- Organization Scope
   https://github.com/organizations/OrganizationName/settings/secrets/actions
 - Repo Scope
   https://github.com/AccountName/RepoName/settings/secrets/actions
 
 See more about [GitHub secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
+
+## References
+- [What is Developer Security?](https://www.checkpoint.com/cyber-hub/cloud-security/what-is-developer-security/)
+- [Shift Left: Check Point Security Solution for DevOps](https://www.checkpoint.com/cloudguard/devsecops/)
