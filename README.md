@@ -18,18 +18,11 @@ on:
 
 jobs:
   code-analysis:
-    uses: CheckPointSW/secure-code-workflow/.github/workflows/code-analysis.yml@main
+    uses: CheckPointSW/secure-code-workflow/.github/workflows/code-analysis.yml@latest
     secrets: inherit
 ```
 
 ### Configuration
- 
-SourceGuard action must receive:
- 
-- `SG_CLIENT_ID` - Infinity Portal account identification
-- `SG_SECRET_KEY` - Secret key for access
- 
-To generate these parameters, refer to https://portal.checkpoint.com/dashboard/sourceguard#/config/install (select your required Tenant) > GENERATE TOKEN
  
 Spectral action must receive:
 - `SPECTRAL_DSN` - You'll need to provide Spectral dsn.  [GitHub secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).

@@ -1,28 +1,9 @@
 name: Code Analysis
 
 on: workflow_call
-#   push:
-#     branches: [ $default-branch ]
-#   pull_request:
-#     branches: [ $default-branch ]
 
 env:
   SPECTRAL_DSN: ${{ secrets.SPECTRAL_DSN }}
-  
-jobs:
-  sourceguard:
-    runs-on: ubuntu-latest
-    container:
-      image: sourceguard/sourceguard-cli:latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: '0'
-      - name: SourceGuard Scan
-        uses: CheckPointSW/sourceguard-action@main
-        with:
-          SG_CLIENT_ID: ${{ secrets.SG_CLIENT_ID }}
-          SG_SECRET_KEY: ${{ secrets.SG_SECRET_KEY }}
           
   spectral:
     runs-on: ubuntu-latest
