@@ -9,8 +9,8 @@ env:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Spectral Scan
-        uses: SpectralOps/spectral-github-action@v2
+      - name: CloudGuard Code Security Scan
+        uses: checkpointsw/spectral-github-action@v4
         with:
           spectral-dsn: ${{ env.SPECTRAL_DSN }}
           spectral-args: scan --fail-on-error --engines secrets,iac,oss --asset-mapping github.${{ github.repository_owner }}
