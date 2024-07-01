@@ -14,4 +14,4 @@ jobs:
         uses: checkpointsw/spectral-github-action@v4
         with:
           spectral-dsn: ${{ env.SPECTRAL_DSN }}
-          spectral-args: scan --fail-on-error --engines secrets,iac,oss --asset-mapping github.${{ github.repository_owner }}
+          spectral-args: scan --fail-on-error --engines secrets,iac,oss --asset-mapping github.${{ github.repository_owner }} --log debug
